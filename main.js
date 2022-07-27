@@ -69,9 +69,9 @@ async function main() {
                 pass: password
             } : undefined,
             port: serverPort,
-            secure: secure == "true" ? true : serverPort == "25",
+            secure: secure == "true" ? true : serverPort == "465",
             tls: ignoreCert == "true" ? {
-                rejectUnauthorized: false
+                rejectUnauthorized: true
             } : undefined,
         })
 
