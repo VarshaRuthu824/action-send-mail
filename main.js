@@ -69,10 +69,8 @@ async function main() {
                 pass: password
             } : undefined,
             port: serverPort,
-            secure: secure == "true" ? true : serverPort == "465",
-            tls: ignoreCert == "true" ? {
-                rejectUnauthorized: true
-            } : undefined,
+            secure: secure == "false",
+            tls: ignoreCert == "false"
         })
 
         const info = await transport.sendMail({
